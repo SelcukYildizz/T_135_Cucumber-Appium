@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import utils.ConfigReader;
 
 import java.net.MalformedURLException;
 import java.net.URL;

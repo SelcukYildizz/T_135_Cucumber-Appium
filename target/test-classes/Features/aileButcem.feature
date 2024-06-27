@@ -10,4 +10,6 @@ Feature: Kullanici ailebutcem uygulamasindaki gorevleri yerine getirir.
 * "mail" ve "password" bilgilerini girerek kullanici bilgileriyle "Giriş Yap"
 * uygulamaya kullanici bilgileriyle giris yapildigini dogrulayin
 * sol kisimdaki menuden "Hesabım" bolumune gidin
-* hesabim sayfasindaki bilgileri degistirerek degisikleri kaydedin ve değişikleri dogrulayin
+* hesabim sayfasindaki bilgileri degistirerek "Name" "Surname" "City" "Age" "Job" degisikleri kaydedin ve değişikleri dogrulayin
+
+

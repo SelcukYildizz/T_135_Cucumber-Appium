@@ -23,7 +23,7 @@ public class aileButcemStepDefinitions {
 
 
     @Given("ilk ekran ayarlarini yapin ve ardindan login sayfasina ulasin")
-    public void ilk_ekran_ayarlarini_yapin_ve_ardindan_login_sayfasina_ulasin() {
+    public void ilk_ekran_ayarlarini_yapin_ve_ardindan_login_sayfasina_ulasin() throws InterruptedException {
 
         page.ilkEkranAyarlari();
 
@@ -54,8 +54,14 @@ public class aileButcemStepDefinitions {
 
 
     }
-    @Given("hesabim sayfasindaki bilgileri degistirerek degisikleri kaydedin ve değişikleri dogrulayin")
-    public void hesabim_sayfasindaki_bilgileri_degistirerek_degisikleri_kaydedin_ve_değişikleri_dogrulayin() {
+    @Given("hesabim sayfasindaki bilgileri degistirerek {string} {string} {string} {string} {string} degisikleri kaydedin ve değişikleri dogrulayin")
+    public void hesabim_sayfasindaki_bilgileri_degistirerek_degisikleri_kaydedin_ve_değişikleri_dogrulayin(String name, String surname, String city, String age, String job) {
+
+     page.hesapBilgileri(name,surname,city, age, job);
+
+     page.assertionTextBox(name,surname, city, age, job);
+
+
 
 
 
