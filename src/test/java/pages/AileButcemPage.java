@@ -63,6 +63,24 @@ public class AileButcemPage {
     @FindBy(xpath = "//*[@text='Kaydet']")
     public MobileElement kaydetButton;
 
+    @FindBy(xpath = "//*[@text='Gelir Ekle']")
+    public MobileElement gelirEkleButtonu;
+
+    @FindBy (xpath = "//*[@text='Açıklama']")
+    public MobileElement aciklamaButtonu;
+
+       @FindBy(xpath = "(//*[@class='android.widget.ImageView'])[5]")
+    public MobileElement artiButonu;
+
+
+
+
+
+
+
+
+
+
 
 
     public void dortCizgiMenu () throws InterruptedException {
@@ -107,6 +125,27 @@ public class AileButcemPage {
         Assert.assertTrue(cityBox.getText().equals(ConfigReader.getProperty(city)));
         Assert.assertTrue(ageBox.getText().equals(ConfigReader.getProperty(age)));
         Assert.assertTrue(jobBox.getText().equals(ConfigReader.getProperty(job)));
+    }
+
+    public void artiButonuTiklama() throws InterruptedException {
+
+        artiButonu.click();
+        Thread.sleep(3000);
+
+        //Thread.sleep(300);
+
+        //ReusableMethods.tiklamaMethodu(537,1994,3);
+
+
+
+    }
+
+    public void aciklamaGirme(String aciklama) throws InterruptedException {
+
+        aciklamaButtonu.click();
+        aciklamaButtonu.sendKeys("Toprak borc");
+        Thread.sleep(300);
+        ReusableMethods.tiklamaMethodu(995,2076,3);
     }
 
 
